@@ -1,0 +1,20 @@
+#!/bin/bash
+# Deploy wf-marketing to droplet
+# Usage: ./market-deploy
+
+set -e
+
+DROPLET_USER="n8n"
+DROPLET_IP="159.223.104.19"
+REPO_DIR="/home/n8n/wf-marketing"
+
+echo "=== wf-marketing deploy ==="
+echo "Pushing to GitHub..."
+git push origin main
+
+echo ""
+echo "Deploying to droplet ($DROPLET_IP)..."
+ssh "$DROPLET_USER@$DROPLET_IP" "bash $REPO_DIR/scripts/deploy.sh"
+
+echo ""
+echo "✓ Deploy complete!"
