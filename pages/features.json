@@ -1,0 +1,55 @@
+{
+  "features": [
+    {
+      "id": "intuitive-interface",
+      "featured": true,
+      "order": 1,
+      "title": "Intuitive Grid & Form Interface",
+      "icon": "✏️",
+      "description": "Edit any record instantly with a dual grid/form system. No page navigation. Make corrections, updates, and changes seamlessly.",
+      "details": [
+        "Built for efficiency. See all your records in a grid, click any row to edit in a side panel. No page navigation, no drilling through menus—just instant access to what you need.",
+        "Whether you're correcting a data entry mistake, updating ingredient information, or managing batch details, changes are immediate and seamless. This is what modern data management looks like."
+      ]
+    },
+    {
+      "id": "batch-mapping",
+      "featured": true,
+      "order": 2,
+      "title": "Fast Batch Mapping",
+      "icon": "⚡",
+      "description": "Set up your business once, then create batches and manage ingredients in seconds. No drilling through menus.",
+      "details": [
+        "The old way? Drill through products or ingredients to add a batch. The new way? Three clicks: Product Type → Product → Batch. Then map your ingredients according to your recipe.",
+        "No more navigating through multiple screens. Your recipe appears automatically, showing exactly which ingredients go into this batch. Double-click to map ingredient batches, and you're done.",
+        "Wrong mapping? No problem. Just double-click the mapped batch to unmap it. It's that simple."
+      ]
+    },
+    {
+      "id": "production-worksheets",
+      "featured": true,
+      "order": 4,
+      "title": "Print-Ready Production Worksheets",
+      "icon": "📋",
+      "description": "Generate compliance-ready documentation instantly. Everything your team needs in one place.",
+      "details": [
+        "After mapping your ingredients, generate a complete batch worksheet in one click. It includes:",
+        "• Batch details (date, location, quantity)\n• Complete ingredient list with batch IDs (full traceability)\n• Task assignments and who's responsible for each step\n• Ready to print for production floor",
+        "What used to require pulling information from multiple screens is now one coherent document your team can reference during production."
+      ]
+    },
+    {
+      "id": "ingredient-traceability",
+      "featured": true,
+      "order": 3,
+      "title": "Complete Ingredient Traceability",
+      "icon": "🔍",
+      "description": "Track any ingredient through every product it touched. Critical for recalls and FDA compliance.",
+      "details": [
+        "Need to trace an ingredient through your entire production? What's Fresh shows you instantly:",
+        "• Forward tracing: Pick any ingredient batch, see every product it went into\n• Recall ready: In seconds, know exactly which batches and products are affected\n• Complete audit trail: FSMA lot codes, dates, locations, supplier information all linked",
+        "For FDA compliance and recalls, this isn't just helpful—it's essential. What's Fresh makes it instant."
+      ]
+    }
+  ]
+}
