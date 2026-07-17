@@ -23,10 +23,19 @@ async function loadFeatureCards() {
 
   // Render feature cards with links to detail pages
   gridContainer.innerHTML = featuredFeatures.map(feature => `
-    <a href="${feature.path}" class="feature-card" style="text-decoration: none; color: inherit;">
-      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-        <div class="feature-icon">${feature.icon}</div>
-        <h3 style="margin: 0;">${feature.title}</h3>
+    <a href="${feature.path}" 
+      class="feature-card" 
+      style="text-decoration: none; 
+      color: inherit;">
+      <div style="display: flex; 
+        align-items: center; 
+        gap: 6px; margin-bottom: 6px;">
+        <div 
+          class="feature-icon">${feature.icon}
+        </div>
+        <h3 
+          style="margin: 0;">${feature.title}
+        </h3>
       </div>
       <p>${feature.description}</p>
     </a>

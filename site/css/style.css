@@ -11,12 +11,12 @@ body {
         Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #dfdbdb;
+    background-color: #f3ecec;
 }
 
 /* Header */
 header {
-    background: #faeaea;
+    background: #dee6db;
     border-bottom: 1px solid #e5e7eb;
     padding: 1rem 1rem;
     display: flex;
