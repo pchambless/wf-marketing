@@ -1,0 +1,4 @@
+#!/bin/bash
+# Local dev server
+echo "Serving at http://localhost:8000"
+npx http-server site -p 8000 -c-1

@@ -1,20 +1,30 @@
 #!/bin/bash
-# Deploy wf-marketing to droplet
-# Usage: ./market-deploy
+# Deploy wf-marketing: push to GitHub, pull on droplet, sync to web root
+# Run locally: bash market-deploy
 
 set -e
 
-DROPLET_USER="n8n"
-DROPLET_IP="159.223.104.19"
-REPO_DIR="/home/n8n/wf-marketing"
+DROPLET_HOST="n8n.whatsfresh.app"
+REMOTE_DIR="/home/n8n/wf-marketing"
 
-echo "=== wf-marketing deploy ==="
-echo "Pushing to GitHub..."
-git push origin main
+echo "=== wf-marketing Push & Deploy ==="
 
-echo ""
-echo "Deploying to droplet ($DROPLET_IP)..."
-ssh "$DROPLET_USER@$DROPLET_IP" "bash $REPO_DIR/scripts/deploy.sh"
+# 1. Push current branch to origin
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "[local] Pushing $BRANCH to origin..."
+git push origin "$BRANCH"
 
-echo ""
-echo "✓ Deploy complete!"
+# 2. If not on main, merge to main and push
+if [ "$BRANCH" != "main" ]; then
+  echo "[local] Merging $BRANCH into main..."
+  git checkout main
+  git merge "$BRANCH"
+  git push origin main
+  git checkout "$BRANCH"
+fi
+
+# 3. SSH to droplet and run deploy
+echo "[remote] Deploying on droplet..."
+ssh "$DROPLET_HOST" "cd $REMOTE_DIR && bash scripts/deploy.sh"
+
+echo "=== Done ==="

@@ -2,7 +2,7 @@ let allFeatures = [];
 
 async function loadAllFeatures() {
   try {
-    const response = await fetch('/pages/features.json');
+    const response = await fetch('/features.json');
     const data = await response.json();
     allFeatures = data.features;
   } catch (error) {
@@ -60,7 +60,7 @@ async function loadFeatureDetail(featureName) {
         <div class="accordion-content">
           <p>Pick any ingredient batch and see its complete journey:</p>
           <div class="flow-diagram">
-            <div class="flow-step">Supplier</div>
+            <div class="flow-step">Vendor & Date</div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">Ingredient Batch</div>
             <div class="flow-arrow">→</div>
