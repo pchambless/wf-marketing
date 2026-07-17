@@ -23,9 +23,11 @@ async function loadFeatureCards() {
 
   // Render feature cards with links to detail pages
   gridContainer.innerHTML = featuredFeatures.map(feature => `
-    <a href="/features/${feature.id}/" class="feature-card" style="text-decoration: none; color: inherit;">
-      <div class="feature-icon">${feature.icon}</div>
-      <h3>${feature.title}</h3>
+    <a href="${feature.path}" class="feature-card" style="text-decoration: none; color: inherit;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+        <div class="feature-icon">${feature.icon}</div>
+        <h3 style="margin: 0;">${feature.title}</h3>
+      </div>
       <p>${feature.description}</p>
     </a>
   `).join('');
@@ -116,7 +118,7 @@ async function loadFeatureDetail(featureName) {
       <h3>${feature.title}</h3>
       ${detailsHTML}
       ${accordionHTML}
-      <img src="./images/screenshot.png" alt="${feature.title}" style="max-width: 100%; border-radius: 8px; border: 1px solid #e5e7eb; margin: 2rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.07);" />
+      <img src="${feature.image}" alt="${feature.title}" style="max-width: 100%; border-radius: 8px; border: 1px solid #e5e7eb; margin: 2rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.07);" />
     </div>
   `;
 }

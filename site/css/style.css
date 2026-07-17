@@ -147,7 +147,7 @@ nav a:hover {
 
 /* Features Section */
 .features {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -172,17 +172,17 @@ nav a:hover {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .feature-card {
     background: #f9fafb;
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 2rem;
     transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid #e5e7eb;
+    border: 2px solid #567dcd;
     cursor: pointer;
 }
 
@@ -219,7 +219,7 @@ nav a:hover {
     margin: 4rem 0;
     padding: 3rem;
     background: #f9fafb;
-    border-radius: 12px;
+    border-radius: 15px;
     border: 1px solid #e5e7eb;
 }
 
