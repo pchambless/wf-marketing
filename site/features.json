@@ -40,9 +40,9 @@
       "icon": "🔍",
       "description": "Track any ingredient through every product it touched. Critical for recalls and FDA compliance.",
       "details": [
-        "Need to trace an ingredient through your entire production? What's Fresh shows you instantly:",
-        "• Forward tracing: Pick any ingredient batch, see every product it went into<br>• Recall ready: In seconds, know exactly which batches and products are affected<br>• Complete audit trail: FSMA lot codes, dates, locations, supplier information all linked",
-        "For FDA compliance and recalls, this isn't just helpful—it's essential. What's Fresh makes it instant."
+        "Need to trace an ingredient through your entire production? <strong>Whatfresh</strong> shows you instantly!",
+        "• <strong>Forward tracing:</strong> Pick any ingredient batch, see every <strong>Product Batch</strong> it went into<br>• <strong>Recall ready:</strong> In seconds, know exactly which batches and products are affected<br>• <strong>Complete audit trail:</strong> FSMA lot codes, dates, locations, supplier information all linked",
+        "For FDA compliance and recalls, this isn't just helpful—it's essential. <strong>Whatfresh</strong> makes it instant."
       ]
     },
     {
