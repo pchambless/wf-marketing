@@ -1,12 +1,13 @@
 #!/bin/bash
 # Deploy wf-marketing: pull latest, sync to web root
-# Run on droplet: bash /home/n8n/wf-marketing/scripts/deploy.sh [dev|prod] [branch]
+# Run on droplet: bash <repo>/scripts/deploy.sh [dev|prod] [branch]
 
 set -e
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
 TARGET="${1:-prod}"
-REPO_DIR="/home/n8n/wf-marketing"
-LOG_FILE="/home/n8n/wf-marketing/logs/deploy.log"
+LOG_FILE="$REPO_DIR/logs/deploy.log"
 
 case "$TARGET" in
   dev)
