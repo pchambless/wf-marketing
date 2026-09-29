@@ -84,7 +84,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
@@ -93,7 +93,7 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.hero h1 {
+.hero h2 {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -153,6 +153,7 @@ nav a:hover {
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    scroll-margin-top: 80px;
 }
 
 .features-header {
@@ -252,6 +253,190 @@ nav a:hover {
     color: #6b7280;
     margin: 2rem 0;
     font-size: 0.95rem;
+}
+
+.feature-screenshot {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+    cursor: zoom-in;
+    transition: box-shadow 0.2s;
+}
+
+.feature-screenshot:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    cursor: zoom-out;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 2rem 1rem 3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    scroll-margin-top: 80px;
+}
+
+.steps-list {
+    margin-top: 2.5rem;
+}
+
+.step {
+    display: flex;
+    gap: 1.25rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.step:last-child {
+    padding-bottom: 0;
+}
+
+.step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 40px;
+    bottom: 0;
+    width: 2px;
+    background: #dcfce7;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #22c55e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 1;
+}
+
+.step-content h3 {
+    font-size: 1.15rem;
+    color: #1f2937;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.step-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #16a34a;
+    background: #dcfce7;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 2rem 1rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    scroll-margin-top: 80px;
+}
+
+.pricing-card {
+    max-width: 380px;
+    margin: 0 auto;
+    background: #f9fafb;
+    border: 2px solid #22c55e;
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+}
+
+.pricing-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 1rem;
+}
+
+.pricing-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-period {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.pricing-tagline {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-detail {
+    color: #666;
+    margin-bottom: 1.5rem;
 }
 
 /* Testimonial Section */
@@ -400,7 +585,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero h2 {
         font-size: 2rem;
     }
 
@@ -432,7 +617,7 @@ footer {
         background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
     }
 
-    .hero h1,
+    .hero h2,
     .features-header h2,
     .feature-detail h3,
     .testimonial-quote {
@@ -459,6 +644,38 @@ footer {
     .feature-detail:nth-child(even) {
         background: #1f2937;
         border-color: #16a34a;
+    }
+
+    .pricing-card {
+        background: #374151;
+        border-color: #22c55e;
+    }
+
+    .pricing-amount,
+    .pricing-tagline {
+        color: #f3f4f6;
+    }
+
+    .pricing-period,
+    .pricing-detail {
+        color: #d1d5db;
+    }
+
+    .step-content h3 {
+        color: #f3f4f6;
+    }
+
+    .step-content p {
+        color: #d1d5db;
+    }
+
+    .step:not(:last-child)::before {
+        background: #374151;
+    }
+
+    .step-tag {
+        background: #064e3b;
+        color: #dcfce7;
     }
 
     .screenshot-placeholder {

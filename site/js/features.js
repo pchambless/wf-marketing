@@ -127,9 +127,38 @@ async function loadFeatureDetail(featureName) {
       <h3>${feature.title}</h3>
       ${detailsHTML}
       ${accordionHTML}
-      <img src="${feature.image}" alt="${feature.title}" style="max-width: 100%; border-radius: 8px; border: 1px solid #e5e7eb; margin: 2rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.07);" />
+      <img src="${feature.image}" alt="${feature.title}" class="feature-screenshot" onclick="openLightbox(this.src, this.alt)" />
     </div>
   `;
+}
+
+function openLightbox(src, alt) {
+  let overlay = document.getElementById('lightbox-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'lightbox-overlay';
+    overlay.className = 'lightbox-overlay';
+    overlay.onclick = closeLightbox;
+    overlay.innerHTML = `
+      <button class="lightbox-close" aria-label="Close" onclick="closeLightbox(event)">&times;</button>
+      <img class="lightbox-img" src="" alt="" />
+    `;
+    document.body.appendChild(overlay);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  }
+  overlay.querySelector('.lightbox-img').src = src;
+  overlay.querySelector('.lightbox-img').alt = alt;
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(event) {
+  if (event) event.stopPropagation();
+  const overlay = document.getElementById('lightbox-overlay');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
 }
 
 function toggleAccordion(element) {
