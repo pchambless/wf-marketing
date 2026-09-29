@@ -9,8 +9,6 @@
 set -e
 
 TARGET="${1:-dev}"
-DROPLET_HOST="n8n.whatsfresh.app"
-REMOTE_DIR="/home/n8n/wf-marketing"
 
 echo "=== wf-marketing Push & Deploy ($TARGET) ==="
 
@@ -18,11 +16,20 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 case "$TARGET" in
   dev)
+    # wf-v2-dev (142.93.204.168) - reached via n8n.whatsfresh.app since the
+    # 2026-09-28 DNS cutover (task 433). Checkout lives under the n8n user.
+    DROPLET_HOST="n8n.whatsfresh.app"
+    REMOTE_DIR="/home/n8n/wf-marketing"
     echo "[local] Pushing $BRANCH to origin..."
     git push origin "$BRANCH"
     DEPLOY_BRANCH="$BRANCH"
     ;;
   prod)
+    # wf-v2-prod (142.93.113.124) - a distinct droplet from dev, reached by
+    # IP directly (no dedicated hostname yet; see task 433/435 for the
+    # pending www/apex DNS cutover). Checkout lives under root, not n8n.
+    DROPLET_HOST="142.93.113.124"
+    REMOTE_DIR="/root/wf-marketing"
     echo "[local] Pushing $BRANCH to origin..."
     git push origin "$BRANCH"
     if [ "$BRANCH" != "main" ]; then
@@ -40,7 +47,7 @@ case "$TARGET" in
     ;;
 esac
 
-echo "[remote] Deploying $DEPLOY_BRANCH to $TARGET on droplet..."
+echo "[remote] Deploying $DEPLOY_BRANCH to $TARGET on droplet ($DROPLET_HOST)..."
 ssh "$DROPLET_HOST" "cd $REMOTE_DIR && bash scripts/deploy.sh $TARGET $DEPLOY_BRANCH"
 
 echo "=== Done ($TARGET) ==="
