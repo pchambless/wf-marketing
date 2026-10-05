@@ -11,7 +11,8 @@
       "description": "Edit any record instantly with a dual grid/form system. No page navigation. Make corrections, updates, and changes seamlessly.",
       "details": [
         "Built for efficiency. See all your records in a grid, click any row to edit in a side panel. No page navigation, no drilling through menus—just instant access to what you need.",
-        "Whether you're correcting a data entry mistake, updating ingredient information, or managing batch details, changes are immediate and seamless. This is what modern data management looks like."
+        "Whether you're correcting a data entry mistake, updating ingredient information, or managing batch details, changes are immediate and seamless. This is what modern data management looks like.",
+        "Need to add to a Dropdown? Just click the '+' button, add it, and it's there!"
       ]
     },
     {
@@ -26,8 +27,9 @@
       "details": [
         "- <strong>The old way?</strong> Drill through products or ingredients to add a batch.",
         "- <strong>The new way?</strong> Three clicks: Product Type → Product → Batch. Then map your ingredients according to your recipe.",
-        "• No more navigating through multiple screens.<br>•  Your recipe appears automatically, showing exactly which ingredients go into this batch.<br>• Double-click to map ingredient batches, and you're done.",
-        "<strong>Ooops!  Wrong mapping?</strong><br>  No problem. Just double-click the mapped batch to unmap it. <strong>It's that simple.</strong>"
+        "• No more navigating through multiple screens.<br>•  Your recipe appears automatically, showing exactly which ingredients go into this batch.<br>• Click the map button in the Batch Choices grid. <strong>DONE!</strong>.",
+        "<strong>Ooops!  Wrong mapping?</strong><br>  No problem. click the unmap button. <strong>DONE!</strong>",
+        "<strong>It's that simple.</strong>"
       ]
     },
     {
@@ -57,7 +59,7 @@
       "details": [
         "After mapping your ingredients, generate a complete batch worksheet in one click. It includes:",
         "• Batch details (date, location, quantity)<br>• Complete ingredient list with batch IDs (full traceability)<br>• Task assignments and who's responsible for each step<br>• Ready to print for production floor",
-        "What used to require pulling information from multiple screens is now one coherent document your team can reference during production."
+        "What used to require pulling information from multiple screens is now one coherent document!"
       ]
     }
   ]

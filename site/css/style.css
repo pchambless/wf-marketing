@@ -81,6 +81,19 @@ nav a:hover {
     background: #16a34a;
 }
 
+/* Temporary: registration disabled pre-launch (whatsfresh.users/accounts on
+   dev gets truncated+reloaded by the weekly legacy ETL - a real signup
+   would be wiped). Swap back to a live <a href> once go-live is confirmed. */
+.cta-button--disabled {
+    display: inline-block;
+    background: #9ca3af;
+    cursor: default;
+}
+
+.cta-button--disabled:hover {
+    background: #9ca3af;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);

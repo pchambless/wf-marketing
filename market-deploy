@@ -28,7 +28,7 @@ case "$TARGET" in
     # wf-v2-prod (142.93.113.124) - a distinct droplet from dev, reached by
     # IP directly (no dedicated hostname yet; see task 433/435 for the
     # pending www/apex DNS cutover). Checkout lives under root, not n8n.
-    DROPLET_HOST="142.93.113.124"
+    DROPLET_HOST="root@142.93.113.124"
     REMOTE_DIR="/root/wf-marketing"
     echo "[local] Pushing $BRANCH to origin..."
     git push origin "$BRANCH"
