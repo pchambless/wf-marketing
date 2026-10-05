@@ -14,6 +14,24 @@ body {
     background-color: #f3ecec;
 }
 
+/* Countdown banner - collapsed (height: 0) until countdown.js confirms a
+   valid launch.json and adds .visible, so a missing/broken date fails
+   silently instead of leaving an empty bar. */
+.countdown-banner {
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    background: #16a34a;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.countdown-banner.visible {
+    height: auto;
+    padding: 0.5rem 1rem;
+}
+
 /* Header */
 header {
     background: #dee6db;
