@@ -42,6 +42,14 @@ log "Syncing files to $WEB_ROOT..."
 sudo mkdir -p "$WEB_ROOT"
 sudo rsync -av --delete "$REPO_DIR/site/" "$WEB_ROOT/" 2>&1 | tee -a "$LOG_FILE"
 
+# 2b. Dev only: source links point at the PROD app (v2.whatsfresh.app/login);
+# rewrite them so the dev marketing site logs into the dev app (task 467).
+# Runs after every rsync because rsync --delete restores the source links.
+if [ "$TARGET" = "dev" ]; then
+  log "Pointing Login links at the dev app..."
+  sudo find "$WEB_ROOT" -name '*.html' -exec sed -i 's#https://v2.whatsfresh.app/login#https://dev-v2.whatsfresh.app/login#g' {} +
+fi
+
 # 3. Fix ownership
 log "Setting permissions..."
 sudo chown -R www-data:www-data "$WEB_ROOT"
