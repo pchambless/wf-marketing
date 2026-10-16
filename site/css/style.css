@@ -458,6 +458,13 @@ nav a:hover {
     color: #666;
 }
 
+.pricing-alt {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
 .pricing-tagline {
     font-size: 1.25rem;
     font-weight: 700;
@@ -688,6 +695,7 @@ footer {
     }
 
     .pricing-period,
+    .pricing-alt,
     .pricing-detail {
         color: #d1d5db;
     }
