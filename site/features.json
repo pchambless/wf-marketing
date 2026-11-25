@@ -63,6 +63,23 @@
       ]
     },
     {
+      "id": "shopping-trips",
+      "featured": true,
+      "order": 5,
+      "path": "/features/shopping-trips/",
+      "image": "/features/shopping-trips/images/screenshot.png",
+      "title": "Shopping Trips",
+      "icon": "🛒",
+      "description": "Plan the run, print the list, then record every lot you bought in one place: one store, one day.",
+      "details": [
+        "You buy ingredients in trips, so record them that way. Pick the store and the date, and everything you bought there lives together.",
+        "<strong>Before you go:</strong> add what you need to the shopping list (just the ingredient) and print it. The list is grouped by type and shows what you paid last time, so price jumps stand out.",
+        "<strong>When you get back:</strong> click each item and record the batch number, quantity, price and the supplier's lot code. Store and date are already filled in, and the last batch number for that ingredient is right there, so you always know what number comes next.",
+        "• Store only had part of a lot? Add a second lot for the same ingredient in one click.<br>• Print a receipt of the whole trip, lot by lot, with the total spent.<br>• Every purchase is a full ingredient batch, ready for batch mapping and recalls.",
+        "<strong>Less typing, nothing missed, and a record an inspector can follow.</strong>"
+      ]
+    },
+    {
       "id": "recalls",
       "featured": true,
       "order": 6,
