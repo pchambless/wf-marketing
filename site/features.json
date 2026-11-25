@@ -61,6 +61,23 @@
         "• Batch details (date, location, quantity)<br>• Complete ingredient list with batch IDs (full traceability)<br>• Task assignments and who's responsible for each step<br>• Ready to print for production floor",
         "What used to require pulling information from multiple screens is now one coherent document!"
       ]
+    },
+    {
+      "id": "recalls",
+      "featured": true,
+      "order": 6,
+      "path": "/features/recalls/",
+      "image": "/features/recalls/images/screenshot.png",
+      "title": "Recall-Ready",
+      "icon": "🛡️",
+      "description": "Start from the ingredient lot, see every batch it went into, and know exactly which customers to call.",
+      "details": [
+        "A supplier calls about a bad lot. With WhatsFresh you start from that ingredient lot and see every product batch it went into, with the supplier and the date you received it at the top.",
+        "<strong>Who got it?</strong> Record which customers received each product batch as you ship. When it counts, the list is already there.",
+        "<strong>One report, in the right order:</strong> customers to notify first, then the product batches and shipments, then your recall plan. Read it on screen or print it.",
+        "<strong>Your written recall plan:</strong> fill in a few blanks (your coordinator, a backup, where your sales records are kept) and print a plan you can keep on hand or show an inspector.",
+        "<strong>Practice before it's real:</strong> run a practice drill on any lot, so the first time you do a recall isn't the day it matters."
+      ]
     }
   ]
 }

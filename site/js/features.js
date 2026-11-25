@@ -127,7 +127,7 @@ async function loadFeatureDetail(featureName) {
       <h3>${feature.title}</h3>
       ${detailsHTML}
       ${accordionHTML}
-      <img src="${feature.image}" alt="${feature.title}" class="feature-screenshot" onclick="openLightbox(this.src, this.alt)" />
+      <img src="${feature.image}" alt="${feature.title}" class="feature-screenshot" onclick="openLightbox(this.src, this.alt)" onerror="this.remove()" />
     </div>
   `;
 }
